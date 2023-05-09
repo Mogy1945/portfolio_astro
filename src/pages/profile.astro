@@ -1,80 +1,102 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card_disp from "../components/Card_disp.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1><span class="text-gradient">Profile</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+  <Header />
+  <main>
+    <h1><span class="text-gradient">Profile</span></h1>
+    <p class="instructions">
+      １．経歴:<br />商工会議所 ⇒ SaaS企業 ⇒ フリーランス
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card_disp
+        title="Vol.1-1"
+        body="新卒として商工会議所の総務課で1年8か月ほど勤務したのち、たまたま出会った職業訓練校のチラシを機に訓練校のWebデザイナーコースを半年の期間受講し、Webエンジニアに興味を持ちました。"
+      />
+      <Card_disp
+        title="Vol.1-2"
+        body="訓練校を卒業したのち、WebコーダーとしてSaaS企業に2年5か月ほど勤務しましたが、スキル向上や人生の見直しをするために退職し、フリーランスとして生活しています。"
+      />
+      <p class="instructions">
+        ２．趣味:<br />TRPG、ゲーム、漫画、サッカー観戦
+      </p>
+      <Card_disp
+        title="Vol.2-1"
+        body="ゲームは戦略系をプレイ、漫画はバトルものを主に見ます。サッカーは三苫薫のいる「ブライトン」と久保建英のいる「レアル・ソシエダ」を主に観戦します。趣味の中で一押しは「TRPG」です。"
+      />
+      <Card_disp
+        title="Vol.2-2"
+        body="TRPGはドラクエやファイナルファンタジーに代表されるRPGゲームをボードゲームのように現実世界で行う遊びです。プログラムされた電子ゲームと違い、参加者の選択と発想で結末に変化が起こる面白い遊びです。興味がある方はぜひご連絡くださいs"
+      />
+      <p class="instructions">
+        ３．勉強中:<br />React、TypeScript、Astro
+      </p>
+      <Card_disp
+        title="Vol.3-1"
+        body="コーダーとして働く中で特に興味を持ったのはJavaScript(jQuery)でした。もっと勉強を深めていくうちにReactに出会い、Next.jsとTypeScriptを利用した制作を勉強しています。"
+      />
+      <Card_disp
+        title="Vol.3-2"
+        body="最近の案件の中でAstroに出会い、SPAの凄さにあてられた身としては、違った視点からの新技術で驚きとともに興味を持ちました。そしてこのサイトを作るに至ります。"
+      />
+      <p class="instructions">
+        ４．興味:<br />Web3、AI(ChatGPT等)
+      </p>
+      <Card_disp
+        title="Vol.4-1"
+        body="Web3関連は、もともと仮想通貨に興味を持っていた中で、NFT関連のプロダクトに誘われるうちに興味を深めました。Productsにも記載しています。"
+      />
+      <Card_disp
+        title="Vol.4-2"
+        body="ChatGPTには結構衝撃を受けています。ただのプログラマーとして生きていくことに疑問を持ち、ビジネスアイデアなど、超上流過程に手を出したい気持ちでいます。"
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+  }
 </style>
