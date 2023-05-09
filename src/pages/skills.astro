@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card_disp from "../components/Card_disp.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <Header />
+  <main>
+    <h1><span class="text-gradient">Skills</span></h1>
+    <p class="instructions">
+      スキルセットの一覧です。<br />
+      ★★★★★・・・実務の中で利用歴があり、100件以上の実績がある。<br />
+      ★★★★☆・・・実務の中で利用歴があり、30件以上の実績がある。<br />
+      ★★★☆☆・・・実務の中で利用歴がある。<br />
+      ★★☆☆☆・・・勉強の中で利用歴があり、プロダクトとして公開している。<br />
+      ★☆☆☆☆・・・勉強の中で利用歴がある。
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card_disp title="HTML" body="★★★★☆" />
+      <Card_disp title="CSS" body="★★★★☆" />
+      <Card_disp title="jQuery" body="★★★★☆" />
+      <Card_disp title="React" body="★★★☆☆" />
+      <Card_disp title="Next.js" body="★★★☆☆" />
+      <Card_disp title="TypeScript" body="★★★☆☆" />
+      <Card_disp title="SCSS" body="★★★☆☆" />
+      <Card_disp title="Playwright" body="★★★☆☆" />
+      <Card_disp title="DiscordAPI" body="★★★☆☆" />
+      <Card_disp title="Astro" body="★★☆☆☆" />
+      <Card_disp title="Firebase" body="★★☆☆☆" />
+      <Card_disp title="Vue.js" body="★☆☆☆☆" />
+      <Card_disp title="Solidity" body="★☆☆☆☆" />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
