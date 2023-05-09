@@ -9,7 +9,7 @@ export async function getStaticPaths() {
         `https://api.spearly.com/content_types/products/contents`,
         {
           headers: {
-            Authorization: "Bearer " + import.meta.env.SPEARLY_API_KEY,
+            Authorization: "Bearer " + process.env.SPEARLY_API_KEY,
             Accept: "application/vnd.spearly.v2+json",
           },
         }
@@ -51,7 +51,7 @@ const fetchProductData = async (alias: any) => {
       `https://api.spearly.com/content_types/products/contents/${alias}`,
       {
         headers: {
-          Authorization: "Bearer " + import.meta.env.SPEARLY_API_KEY,
+          Authorization: "Bearer " + process.env.SPEARLY_API_KEY,
           Accept: "application/vnd.spearly.v2+json",
         },
       }
